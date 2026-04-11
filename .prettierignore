@@ -1,0 +1,6 @@
+# Ignore all XML metadata
+**/*.xml
+
+# LWC configuration files
+**/jsconfig.json
+**/.eslintrc.json
