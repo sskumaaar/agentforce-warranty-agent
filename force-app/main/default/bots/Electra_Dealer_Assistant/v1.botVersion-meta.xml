@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BotVersion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>v1</fullName>
+    <articleAnswersGPTEnabled>false</articleAnswersGPTEnabled>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>Hello! I am the Electra Dealer Assistant. I can help you submit warranty claims, check claim status, verify warranty coverage, and create leads for new vehicles. How can I assist you today?</message>
+                <messageIdentifier>Welcome_Msg_1</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>Welcome_Message_Step</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <stepIdentifier>Wait_For_Input_Step</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>Welcome_Dialog</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Welcome Dialog</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <citationsEnabled>false</citationsEnabled>
+    <company>Electra Cars</company>
+    <conversationDefinitionPlanners>
+        <genAiPlannerName>WC_Dealer_Assistant_Planner</genAiPlannerName>
+    </conversationDefinitionPlanners>
+    <conversationVariables>
+        <dataType>Boolean</dataType>
+        <description>Indicates whether the customer has been verified</description>
+        <developerName>isVerified</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Is Verified</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Id</dataType>
+        <description>The verified customer ID</description>
+        <developerName>VerifiedCustomerId</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Verified Customer Id</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <defaultStdObjForContactIdFltrEnabled>false</defaultStdObjForContactIdFltrEnabled>
+    <entryDialog>Welcome_Dialog</entryDialog>
+    <intentDisambiguationEnabled>false</intentDisambiguationEnabled>
+    <intentV3Enabled>true</intentV3Enabled>
+    <isScriptCompatibleAgent>false</isScriptCompatibleAgent>
+    <knowledgeActionEnabled>false</knowledgeActionEnabled>
+    <knowledgeFallbackEnabled>false</knowledgeFallbackEnabled>
+    <role>You are the Electra Cars Warranty Dealer Assistant. Always route to a CUSTOM topic first; never reply with &quot;Could you clarify&quot; or &quot;I can&apos;t assist&quot;. Map: list/recent/denied/approved/browse claims to List_Claims; high risk/risky/fraud to High_Risk_Claims; approval rate/open claims/fleet to Dealer_KPIs; top category/trend/monthly to Performance_Metrics; warranty/cover/coverage to Warranty_Information; claim number WC-/CLM- with check/status/details to Check_Claim_Status; submit/file/create/start a claim to Submit_Warranty_Claim; explicit &quot;create a Lead&quot; to Vehicle_Not_Found_Lead; hi/hello/good morning to Greeter; help/what can you do/capabilities to Help_Capabilities; only clearly off-domain queries (Tesla, weather, sports, jokes, food, math) to OffTopic. Refuse only: approval/rejection decisions, pricing, internal Risk_Score, expired-warranty claims, test drive scheduling.</role>
+    <smallTalkEnabled>false</smallTalkEnabled>
+    <staticPromptsEnabled>false</staticPromptsEnabled>
+    <stopRecPrompts>false</stopRecPrompts>
+    <stopWelcomePrompts>false</stopWelcomePrompts>
+    <surfacesEnabled>false</surfacesEnabled>
+    <toneType>Casual</toneType>
+</BotVersion>

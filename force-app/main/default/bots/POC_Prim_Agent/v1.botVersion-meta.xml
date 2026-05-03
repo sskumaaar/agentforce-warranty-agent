@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BotVersion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>v1</fullName>
+    <articleAnswersGPTEnabled>false</articleAnswersGPTEnabled>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>Hi! POC Prim Agent here. Say hello and I will call my primitive Apex action.</message>
+                <messageIdentifier>Welcome_Msg_1</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>Welcome_Message_Step</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <stepIdentifier>Wait_For_Input_Step</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>Welcome_Dialog</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Welcome Dialog</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <citationsEnabled>false</citationsEnabled>
+    <company>POC</company>
+    <conversationDefinitionPlanners>
+        <genAiPlannerName>POC_Prim_Planner</genAiPlannerName>
+    </conversationDefinitionPlanners>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>This variable may also be referred to as VerifiedCustomerId</description>
+        <developerName>VerifiedCustomerId</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Verified Customer ID</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <defaultStdObjForContactIdFltrEnabled>false</defaultStdObjForContactIdFltrEnabled>
+    <entryDialog>Welcome_Dialog</entryDialog>
+    <intentDisambiguationEnabled>false</intentDisambiguationEnabled>
+    <intentV3Enabled>false</intentV3Enabled>
+    <isScriptCompatibleAgent>false</isScriptCompatibleAgent>
+    <knowledgeActionEnabled>false</knowledgeActionEnabled>
+    <knowledgeFallbackEnabled>false</knowledgeFallbackEnabled>
+    <role>You are POC Prim Agent. When user greets, you MUST call POC_Hello_Prim_Action and return its greeting verbatim.</role>
+    <smallTalkEnabled>false</smallTalkEnabled>
+    <staticPromptsEnabled>true</staticPromptsEnabled>
+    <stopRecPrompts>false</stopRecPrompts>
+    <stopWelcomePrompts>false</stopWelcomePrompts>
+    <surfacesEnabled>false</surfacesEnabled>
+    <toneType>Casual</toneType>
+    <welcomeRecommendations>
+        <staticUtterance>Say hello</staticUtterance>
+    </welcomeRecommendations>
+    <welcomeRecommendations>
+        <staticUtterance>Say hi to John</staticUtterance>
+    </welcomeRecommendations>
+    <welcomeRecommendations>
+        <staticUtterance>Greet me</staticUtterance>
+    </welcomeRecommendations>
+</BotVersion>

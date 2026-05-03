@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bot xmlns="http://soap.sforce.com/2006/04/metadata">
+    <agentDSLEnabled>false</agentDSLEnabled>
+    <agentTemplate>EmployeeCopilot__AgentforceEmployeeAgent</agentTemplate>
+    <agentType>AgentforceEmployeeAgent</agentType>
+    <botMlDomain>
+        <label>Electra Claim Approver</label>
+        <name>Electra_Claim_Reviewer</name>
+    </botMlDomain>
+    <botSource>None</botSource>
+    <contextVariables>
+        <dataType>Id</dataType>
+        <description>The ID of the record currently on the user&apos;s screen (Claim when on a claim page).</description>
+        <developerName>currentRecordId</developerName>
+        <includeInPrompt>true</includeInPrompt>
+        <label>Current Record Id</label>
+    </contextVariables>
+    <description>AI-powered assistant for Electra Cars claim approvers. Summarizes pending claims with AI risk analysis, suggests follow-up questions for dealers, detects fraud patterns, and enables approve/reject decisions from the Agentforce sidebar or Slack.</description>
+    <label>Electra Claim Approver</label>
+    <logPrivateConversationData>true</logPrivateConversationData>
+    <richContentEnabled>true</richContentEnabled>
+    <sessionTimeout>0</sessionTimeout>
+    <type>InternalCopilot</type>
+</Bot>

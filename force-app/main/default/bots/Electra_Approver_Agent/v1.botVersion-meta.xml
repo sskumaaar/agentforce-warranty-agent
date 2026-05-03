@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BotVersion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>v1</fullName>
+    <articleAnswersGPTEnabled>false</articleAnswersGPTEnabled>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>Hi — I&apos;m Electra Approver Agent. I help you review pending claims, flag risk and fraud, and record decisions with a full audit trail. What&apos;s first?</message>
+                <messageIdentifier>Welcome_Msg_1</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>Welcome_Message_Step</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <stepIdentifier>Wait_For_Input_Step</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>Welcome_Dialog</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Welcome Dialog</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <citationsEnabled>false</citationsEnabled>
+    <company>Electra Cars</company>
+    <conversationDefinitionPlanners>
+        <genAiPlannerName>Electra_Approver_Planner</genAiPlannerName>
+    </conversationDefinitionPlanners>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>This variable may also be referred to as VerifiedCustomerId</description>
+        <developerName>VerifiedCustomerId</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Verified Customer ID</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <defaultStdObjForContactIdFltrEnabled>false</defaultStdObjForContactIdFltrEnabled>
+    <entryDialog>Welcome_Dialog</entryDialog>
+    <intentDisambiguationEnabled>false</intentDisambiguationEnabled>
+    <intentV3Enabled>false</intentV3Enabled>
+    <isScriptCompatibleAgent>false</isScriptCompatibleAgent>
+    <knowledgeActionEnabled>false</knowledgeActionEnabled>
+    <knowledgeFallbackEnabled>false</knowledgeFallbackEnabled>
+    <role>You are Electra Approver Agent for Electra Cars warranty approvers. You are an analyst, not the decision-maker: surface data (Risk_Score__c, AI_Recommendation__c, AI_Triage_Notes__c, EstimatedAmount, InitiationDate, daysPending, SLA breach flags), and recommendations; the human approver decides. Status vocabulary uses &apos;Approved&apos; and &apos;Denied&apos; (matching the database) — say &quot;deny&quot; / &quot;denied&quot;, not &quot;reject&quot; / &quot;rejected&quot;, in user-facing text. Approve actions accept an optional partial approvedAmount. Approve, deny, and outbound dealer follow-up always require explicit human confirmation, and on success publish a Warranty_Claim_Event__e platform event for downstream Slack/email channels. Never auto-approve or auto-deny. Currency is Indian Rupees (₹) — always display ₹ with Indian-style grouping (e.g. ₹1,50,000), even when the action returns dollar-formatted strings; reformat them. Full behavior is defined in the topic instructions for this agent.</role>
+    <smallTalkEnabled>false</smallTalkEnabled>
+    <staticPromptsEnabled>true</staticPromptsEnabled>
+    <stopRecPrompts>false</stopRecPrompts>
+    <stopWelcomePrompts>false</stopWelcomePrompts>
+    <surfacesEnabled>false</surfacesEnabled>
+    <toneType>Casual</toneType>
+    <welcomeRecommendations>
+        <staticUtterance>Show pending queue, highest risk first</staticUtterance>
+    </welcomeRecommendations>
+    <welcomeRecommendations>
+        <staticUtterance>What&apos;s about to breach SLA?</staticUtterance>
+    </welcomeRecommendations>
+    <welcomeRecommendations>
+        <staticUtterance>Check the system for suspicious claim patterns</staticUtterance>
+    </welcomeRecommendations>
+    <welcomeRecommendations>
+        <staticUtterance>Show me today&apos;s claim summary with approval rate</staticUtterance>
+    </welcomeRecommendations>
+    <welcomeRecommendations>
+        <staticUtterance>What&apos;s the next claim I should review?</staticUtterance>
+    </welcomeRecommendations>
+    <welcomeRecommendations>
+        <staticUtterance>Show me trending part failures this week</staticUtterance>
+    </welcomeRecommendations>
+    <welcomeRecommendations>
+        <staticUtterance>Summarize this claim for me</staticUtterance>
+    </welcomeRecommendations>
+    <welcomeRecommendations>
+        <staticUtterance>Show the AI risk assessment for this claim</staticUtterance>
+    </welcomeRecommendations>
+    <welcomeRecommendations>
+        <staticUtterance>Show me the photos and invoices on this claim</staticUtterance>
+    </welcomeRecommendations>
+    <welcomeRecommendations>
+        <staticUtterance>Generate follow-up questions for this claim</staticUtterance>
+    </welcomeRecommendations>
+    <welcomeRecommendations>
+        <staticUtterance>Run a fraud pattern check on this claim</staticUtterance>
+    </welcomeRecommendations>
+    <welcomeRecommendations>
+        <staticUtterance>Show this dealer&apos;s claim history (last 90 days)</staticUtterance>
+    </welcomeRecommendations>
+    <welcomeRecommendations>
+        <staticUtterance>Run a fraud pattern check on this dealer</staticUtterance>
+    </welcomeRecommendations>
+    <welcomeRecommendations>
+        <staticUtterance>Show this dealer&apos;s approval rate this month</staticUtterance>
+    </welcomeRecommendations>
+    <welcomeRecommendations>
+        <staticUtterance>High-value high-risk claims over ₹5,00,000</staticUtterance>
+    </welcomeRecommendations>
+    <welcomeRecommendations>
+        <staticUtterance>System-wide check on high-risk claims</staticUtterance>
+    </welcomeRecommendations>
+    <welcomeRecommendations>
+        <staticUtterance>Give me an aggregate snapshot of my queue</staticUtterance>
+    </welcomeRecommendations>
+    <welcomeRecommendations>
+        <staticUtterance>Show pending claims with risk 80 or higher</staticUtterance>
+    </welcomeRecommendations>
+</BotVersion>
